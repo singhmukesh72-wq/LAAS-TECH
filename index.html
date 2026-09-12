@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LAAS TECH & FIN. SERVICES - B2B iGaming Development & Integration</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <style>
+    body { font-family: 'Inter', sans-serif; background-color: #f7f7f4; color: #1a1a1a; }
+    h1, h2, h3, h4, .font-heading { font-family: 'Space Grotesk', sans-serif; }
+
+    @keyframes marquee {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+      display: flex;
+      width: 200%;
+      animation: marquee 25s linear infinite;
+    }
+    .animate-marquee:hover {
+      animation-play-state: paused;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-emerald-500 selection:text-white">
+
+  <!-- Header with Multi-Language Switcher -->
+  <header class="border-b border-gray-200 bg-[#f7f7f4]/90 backdrop-blur sticky top-0 z-50">
+    <div class="max-w-[1400px] mx-auto px-8 h-20 flex items-center justify-between">
+      <div class="flex items-center space-x-12">
+        <span class="text-2xl font-extrabold tracking-tighter text-slate-900">LAAS<span class="text-emerald-600">TECH</span></span>
+        <nav class="hidden lg:flex items-center space-x-8 text-sm font-semibold text-gray-700">
+          <a href="#about-us" data-i18n="nav_about" class="hover:text-emerald-600 transition">About Us</a>
+          <a href="#who-we-are" data-i18n="nav_who" class="hover:text-emerald-600 transition">Who We Are</a>
+          <a href="#clients" data-i18n="nav_clients" class="hover:text-emerald-600 transition">Our Clients</a>
+          <a href="#what-we-do" data-i18n="nav_what" class="hover:text-emerald-600 transition">What We Do</a>
+          <a href="#leadership" data-i18n="nav_leadership" class="hover:text-emerald-600 transition">Leadership</a>
+        </nav>
+      </div>
+      
+      <div class="flex items-center space-x-4">
+        <!-- Pure JS Language Selector -->
+        <select id="langSelector" class="bg-white border border-gray-300 text-slate-900 font-bold text-xs px-3 py-2 rounded shadow-sm focus:outline-none focus:border-emerald-600 cursor-pointer">
+          <option value="en">🌐 English</option>
+          <option value="de">🇩🇪 Deutsch (German)</option>
+          <option value="fr">🇫🇷 Français (French)</option>
+          <option value="es">🇪🇸 Español (Spanish)</option>
+        </select>
+
+        <a href="#contact" data-i18n="btn_consult" class="bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold uppercase tracking-widest px-6 py-3 rounded-sm transition shadow-sm">
+          Consult an Expert
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="border-b border-gray-200 py-16 lg:py-24">
+    <div class="max-w-[1400px] mx-auto px-8 grid lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-7 space-y-6">
+        <div data-i18n="hero_tag" class="inline-block text-emerald-700 text-xs font-bold tracking-widest uppercase">
+          // Third-Party iGaming Technology & Integration
+        </div>
+        <h1 data-i18n="hero_title" class="text-4xl sm:text-6xl font-extrabold text-slate-900 leading-[1.1] tracking-tight">
+          Modernize your gaming infrastructure. Scale without limits.
+        </h1>
+        <p data-i18n="hero_desc" class="text-lg text-gray-600 leading-relaxed font-normal max-w-xl">
+          We provide custom HTML5 game engineering, low-latency API integrations, and robust web platform backends for global iGaming operators.
+        </p>
+        <div class="pt-4 flex gap-4">
+          <a href="#contact" data-i18n="hero_btn1" class="bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold uppercase tracking-widest px-7 py-4 rounded-sm transition shadow-md">
+            Request Technical Demo
+          </a>
+          <a href="#what-we-do" data-i18n="hero_btn2" class="border border-gray-400 hover:border-slate-900 text-slate-900 text-xs font-bold uppercase tracking-widest px-7 py-4 rounded-sm transition">
+            Explore Capabilities
+          </a>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5 grid grid-cols-2 gap-4">
+        <div class="space-y-4">
+          <img src="https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&w=600&q=80" alt="3D Casino" class="w-full h-48 object-cover rounded-md shadow-sm border border-gray-200">
+          <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80" alt="Gaming Mechanics" class="w-full h-64 object-cover rounded-md shadow-sm border border-gray-200">
+        </div>
+        <div class="space-y-4 pt-6">
+          <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80" alt="Server Infrastructure" class="w-full h-64 object-cover rounded-md shadow-sm border border-gray-200">
+          <div class="bg-white p-6 border border-gray-200 rounded-md shadow-sm">
+            <span class="text-3xl font-extrabold text-emerald-600 block">99.99%</span>
+            <span data-i18n="hero_stat" class="text-xs font-semibold uppercase text-gray-500 tracking-wider">API Uptime Guaranteed</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MOVING CLIENTS TICKER SECTION -->
+  <section id="clients" class="py-12 border-b border-gray-200 bg-white overflow-hidden">
+    <div class="max-w-[1400px] mx-auto px-8 mb-6">
+      <span data-i18n="clients_title" class="text-emerald-700 text-xs font-bold uppercase tracking-widest block">Trusted Integration Partners & Clients</span>
+    </div>
+    <div class="relative w-full overflow-hidden py-4 border-y border-gray-100 bg-[#fafafa]">
+      <div class="animate-marquee items-center gap-12 text-slate-800 font-bold text-lg tracking-wider uppercase font-heading whitespace-nowrap">
+        <div class="flex items-center gap-12">
+          <span class="px-6 py-2 border border-gray-200 bg-white rounded shadow-sm text-slate-900">Evolution Gaming</span>
+          <span class="text-emerald-500">•</span>
+          <span class="px-6 py-2 border border-gray-200 bg-white rounded shadow-sm text-slate-900">Microgaming</span>
+          <span class="text-emerald-500">•</span>
+          <span class="px-6 py-2 border border-gray-200 bg-white rounded shadow-sm text-slate-900">IGT</span>
+          <span class="text-emerald-500">•</span>
+          <span class="px-6 py-2 border border-gray-200 bg-white rounded shadow-sm text-slate-900">Red Tiger Gaming</span>
+          <span class="text-emerald-500">•</span>
+          <span class="px-6 py-2 border border-gray-200 bg-white rounded shadow-sm text-slate-900">Yggdrasil</span>
+          <span class="text-emerald-500">•</span>
+          <span class="px-6 py-2 border border-gray-200 bg-white rounded shadow-sm text-slate-900">Betsoft</span>
+          <span class="text-emerald-500">•</span>
+          <span class="px-6 py-2 border border-gray-200 bg-white rounded shadow-sm text-slate-900">Rival</span>
+          <span class="text-emerald-500">•</span>
+          <span class="px-6 py-2 border border-gray-200 bg-white rounded shadow-sm text-slate-900">KodeDice</span>
+          <span class="text-emerald-500">•</span>
+        </div>
+        <div class="flex items-center gap-12">
+          <span class="px-6 py-2 border border-gray-200 bg-white rounded shadow-sm text-slate-900">Evolution Gaming</span>
+          <span class="text-emerald-500">•</span>
+          <span class="px-6 py-2 border border-gray-200 bg-white rounded shadow-sm text-slate-900">Microgaming</span>
+          <span class="text-emerald-500">•</span>
+          <span class="px-6 py-2 border border-gray-200 bg-white rounded shadow-sm text-slate-900">IGT</span>
+          <span class="text-emerald-500">•</span>
+          <span class="px-6 py-2 border border-gray-200 bg-white rounded shadow-sm text-slate-900">Red Tiger Gaming</span>
+          <span class="text-emerald-500">•</span>
+          <span class="px-6 py-2 border border-gray-200 bg-white rounded shadow-sm text-slate-900">Yggdrasil</span>
+          <span class="text-emerald-500">•</span>
+          <span class="px-6 py-2 border border-gray-200 bg-white rounded shadow-sm text-slate-900">Betsoft</span>
+          <span class="text-emerald-500">•</span>
+          <span class="px-6 py-2 border border-gray-200 bg-white rounded shadow-sm text-slate-900">Rival</span>
+          <span class="text-emerald-500">•</span>
+          <span class="px-6 py-2 border border-gray-200 bg-white rounded shadow-sm text-slate-900">KodeDice</span>
+          <span class="text-emerald-500">•</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT US SECTION (NEW & DETAILED) -->
+  <section id="about-us" class="py-24 border-b border-gray-200 bg-[#fafafa]">
+    <div class="max-w-[1400px] mx-auto px-8">
+      <div class="mb-12">
+        <span data-i18n="about_tag" class="text-emerald-700 text-xs font-bold uppercase tracking-widest block mb-2">01 / About Us</span>
+        <h2 data-i18n="about_head" class="text-4xl font-extrabold text-slate-900">Engineering Precision & Financial Technology for Modern iGaming</h2>
+      </div>
+
+      <div class="grid lg:grid-cols-12 gap-12 items-center mb-16">
+        <div class="lg:col-span-7 space-y-6 text-gray-700 text-base leading-relaxed">
+          <p data-i18n="about_p1" class="text-lg font-semibold text-slate-900">
+            LAAS TECH & FIN. SERVICES stands at the intersection of high-throughput gaming software development and secure digital financial integrations.
+          </p>
+          <p data-i18n="about_p2">
+            Founded with a vision to streamline complex B2B technical challenges in the online gaming ecosystem, we build fault-tolerant backend systems, low-latency API layers, and custom graphics engines for leading platforms across Europe, Latin America, and Asia.
+          </p>
+          <p data-i18n="about_p3">
+            Our specialized team of software architects, graphics engineers, and fintech experts ensures that our partners experience seamless game delivery, 99.99% operational uptime, and strict compliance with global gaming standards.
+          </p>
+        </div>
+
+        <div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="bg-white p-6 border border-gray-200 rounded-md shadow-sm">
+            <span class="text-3xl font-extrabold text-emerald-700 block mb-1">100M+</span>
+            <span data-i18n="about_stat1_title" class="text-xs font-bold uppercase text-slate-900 block mb-1">Daily Transactions</span>
+            <p data-i18n="about_stat1_desc" class="text-xs text-gray-500">Processed seamlessly through our API gateways.</p>
+          </div>
+          <div class="bg-white p-6 border border-gray-200 rounded-md shadow-sm">
+            <span class="text-3xl font-extrabold text-emerald-700 block mb-1">&lt;50ms</span>
+            <span data-i18n="about_stat2_title" class="text-xs font-bold uppercase text-slate-900 block mb-1">Ultra Low Latency</span>
+            <p data-i18n="about_stat2_desc" class="text-xs text-gray-500">Real-time response times for live dealer & wallet calls.</p>
+          </div>
+          <div class="bg-white p-6 border border-gray-200 rounded-md shadow-sm">
+            <span class="text-3xl font-extrabold text-emerald-700 block mb-1">24/7</span>
+            <span data-i18n="about_stat3_title" class="text-xs font-bold uppercase text-slate-900 block mb-1">Technical Support</span>
+            <p data-i18n="about_stat3_desc" class="text-xs text-gray-500">Continuous monitoring and developer assistance.</p>
+          </div>
+          <div class="bg-white p-6 border border-gray-200 rounded-md shadow-sm">
+            <span class="text-3xl font-extrabold text-emerald-700 block mb-1">100%</span>
+            <span data-i18n="about_stat4_title" class="text-xs font-bold uppercase text-slate-900 block mb-1">Provably Fair</span>
+            <p data-i18n="about_stat4_desc" class="text-xs text-gray-500">RNG certified algorithms and cryptographic verification.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO WE ARE SECTION -->
+  <section id="who-we-are" class="py-24 border-b border-gray-200 bg-white">
+    <div class="max-w-[1400px] mx-auto px-8">
+      <div class="grid lg:grid-cols-12 gap-12 items-start mb-16">
+        <div class="lg:col-span-4">
+          <span data-i18n="who_tag" class="text-emerald-700 text-xs font-bold uppercase tracking-widest block mb-2">02 / Who We Are</span>
+          <h2 data-i18n="who_head" class="text-3xl font-extrabold text-slate-900 leading-tight">
+            Architecting High-Performance Infrastructure for Global iGaming Brands
+          </h2>
+        </div>
+        <div class="lg:col-span-8 space-y-6 text-gray-700 text-lg leading-relaxed">
+          <p data-i18n="who_p1" class="font-semibold text-slate-900 text-xl">
+            LAAS TECH & FIN. SERVICES is a specialized third-party technology, engineering, and platform integration agency dedicated to the global iGaming and digital gaming ecosystem.
+          </p>
+          <p data-i18n="who_p2">
+            We bridge the gap between complex gaming logic and operator platforms. As an external integration and engineering partner, we work closely with top-tier aggregators, game studios, and casino operators.
+          </p>
+          <p data-i18n="who_p3">
+            From low-latency Single Wallet & Transfer Wallet APIs to custom HTML5 / WebGL game engine development and scalable Backoffice CRM Systems, we handle the heavy technical workload.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT WE DO SECTION -->
+  <section id="what-we-do" class="py-24 border-b border-gray-200 bg-[#f7f7f4]">
+    <div class="max-w-[1400px] mx-auto px-8">
+      <div class="mb-16">
+        <span data-i18n="what_tag" class="text-emerald-700 text-xs font-bold uppercase tracking-widest block mb-2">03 / What We Do</span>
+        <h2 data-i18n="what_head" class="text-4xl font-extrabold text-slate-900">iGaming Capabilities & Integration Engineering</h2>
+      </div>
+
+      <div class="grid lg:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="bg-white border border-gray-200 rounded-md p-6 shadow-sm">
+          <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80" alt="API Integration" class="w-full h-48 object-cover rounded mb-6">
+          <span data-i18n="c1_sub" class="text-emerald-700 font-mono text-xs font-bold uppercase block mb-2">[ Unified API Aggregation ]</span>
+          <h3 data-i18n="c1_title" class="text-xl font-bold text-slate-900 mb-3">Single-Wallet & Casino API Integration</h3>
+          <p data-i18n="c1_desc" class="text-sm text-gray-600 leading-relaxed mb-4">
+            Robust Single-Wallet and Transfer-Wallet architecture with sub-100ms latency. Seamlessly connect Live Casino feeds and Sportsbooks.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white border border-gray-200 rounded-md p-6 shadow-sm">
+          <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80" alt="HTML5 Game Dev" class="w-full h-48 object-cover rounded mb-6">
+          <span data-i18n="c2_sub" class="text-emerald-700 font-mono text-xs font-bold uppercase block mb-2">[ Custom Game Development ]</span>
+          <h3 data-i18n="c2_title" class="text-xl font-bold text-slate-900 mb-3">HTML5, WebGL & Crash Games</h3>
+          <p data-i18n="c2_desc" class="text-sm text-gray-600 leading-relaxed mb-4">
+            Custom-engineered HTML5/WebGL game titles—from fast-paced Crash Games, Mines, and Plinko to RNG certified Slot Machines.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white border border-gray-200 rounded-md p-6 shadow-sm">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Backoffice CRM" class="w-full h-48 object-cover rounded mb-6">
+          <span data-i18n="c3_sub" class="text-emerald-700 font-mono text-xs font-bold uppercase block mb-2">[ Turnkey Backoffice & CRM ]</span>
+          <h3 data-i18n="c3_title" class="text-xl font-bold text-slate-900 mb-3">Operator Platform & Risk Engines</h3>
+          <p data-i18n="c3_desc" class="text-sm text-gray-600 leading-relaxed mb-4">
+            Enterprise iGaming platform backends equipped with real-time player analytics, fraud detection, and regulatory logging.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEADERSHIP SECTION -->
+  <section id="leadership" class="py-24 border-b border-gray-200 bg-white">
+    <div class="max-w-[1400px] mx-auto px-8">
+      <div class="mb-16">
+        <span data-i18n="lead_tag" class="text-emerald-700 text-xs font-bold uppercase tracking-widest block mb-2">04 / Leadership</span>
+        <h2 data-i18n="lead_head" class="text-4xl font-extrabold text-slate-900 mb-2">Leadership & Management</h2>
+        <p data-i18n="lead_sub" class="text-xl font-medium text-emerald-700 italic tracking-wide">The driving force behind Laas Tech</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-[#f7f7f4] border border-gray-200 p-6 rounded-md">
+          <span class="text-xs font-bold text-emerald-700 uppercase tracking-widest block mb-1">Chief Executive Officer</span>
+          <h3 class="text-2xl font-bold text-slate-900 mb-3">Mukesh Singh</h3>
+          <p data-i18n="ceo_desc" class="text-sm text-gray-600 leading-relaxed">Drives strategic vision, business expansion, and global client partnerships across the iGaming ecosystem.</p>
+        </div>
+        <div class="bg-[#f7f7f4] border border-gray-200 p-6 rounded-md">
+          <span class="text-xs font-bold text-emerald-700 uppercase tracking-widest block mb-1">Chief Financial Officer</span>
+          <h3 class="text-2xl font-bold text-slate-900 mb-3">Rajiv Ranjan Singh</h3>
+          <p data-i18n="cfo_desc" class="text-sm text-gray-600 leading-relaxed">Oversees financial planning, capital allocation, and compliance for corporate fiscal growth.</p>
+        </div>
+        <div class="bg-[#f7f7f4] border border-gray-200 p-6 rounded-md">
+          <span class="text-xs font-bold text-emerald-700 uppercase tracking-widest block mb-1">Chief Technology Officer</span>
+          <h3 class="text-2xl font-bold text-slate-900 mb-3">Sanjay Pandey</h3>
+          <p data-i18n="cto_desc" class="text-sm text-gray-600 leading-relaxed">Head of system architecture, high-throughput API design, and provably fair game engine innovation.</p>
+        </div>
+        <div class="bg-[#f7f7f4] border border-gray-200 p-6 rounded-md">
+          <span class="text-xs font-bold text-emerald-700 uppercase tracking-widest block mb-1">Chief Operating Officer</span>
+          <h3 class="text-2xl font-bold text-slate-900 mb-3">Hari Shankar Pandey</h3>
+          <p data-i18n="coo_desc" class="text-sm text-gray-600 leading-relaxed">Manages daily operational execution, service delivery pipelines, and cross-functional project teams.</p>
+        </div>
+        <div class="bg-[#f7f7f4] border border-gray-200 p-6 rounded-md">
+          <span class="text-xs font-bold text-emerald-700 uppercase tracking-widest block mb-1">HR Head</span>
+          <h3 class="text-2xl font-bold text-slate-900 mb-3">Rupesh Singh</h3>
+          <p data-i18n="hr_desc" class="text-sm text-gray-600 leading-relaxed">Leads talent acquisition, engineering culture, and strategic human resource development.</p>
+        </div>
+        <div class="bg-[#f7f7f4] border border-gray-200 p-6 rounded-md">
+          <span class="text-xs font-bold text-emerald-700 uppercase tracking-widest block mb-1">Admin Head</span>
+          <h3 class="text-2xl font-bold text-slate-900 mb-3">Brijesh Singh</h3>
+          <p data-i18n="admin_desc" class="text-sm text-gray-600 leading-relaxed">Directs organizational infrastructure, administrative logistics, and facilities operational support.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT & CONTACT DETAILS SECTION -->
+  <section id="contact" class="py-24 bg-[#f7f7f4]">
+    <div class="max-w-[1400px] mx-auto px-8 grid lg:grid-cols-12 gap-12">
+      
+      <!-- Contact Details Info Card -->
+      <div class="lg:col-span-5 space-y-6">
+        <div>
+          <span data-i18n="contact_tag" class="text-emerald-700 text-xs font-bold uppercase tracking-widest block mb-2">// Get In Touch</span>
+          <h2 data-i18n="contact_head" class="text-4xl font-extrabold text-slate-900">Let’s discuss your technical requirements.</h2>
+          <p data-i18n="contact_desc" class="text-gray-600 text-sm leading-relaxed mt-3">
+            Reach out to our engineering team to request custom game demos, integration documentation, or platform quotes.
+          </p>
+        </div>
+
+        <!-- Official Contact Details Block -->
+        <div class="bg-white border border-gray-200 p-6 rounded-md shadow-sm space-y-4">
+          <h3 data-i18n="contact_details_title" class="text-xs font-bold uppercase text-emerald-700 tracking-wider">Our Contact Details</h3>
+          
+          <div class="flex items-center space-x-3 pt-2">
+            <div class="bg-emerald-100 p-2 rounded text-emerald-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <div>
+              <span data-i18n="email_label" class="text-xs text-gray-500 font-semibold block uppercase">Official Email</span>
+              <a href="mailto:Laasrb@outlook.com" class="text-slate-900 font-bold hover:text-emerald-600 transition">Laasrb@outlook.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="lg:col-span-7">
+        <form class="bg-white border border-gray-200 p-8 rounded-md shadow-sm space-y-6">
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <label data-i18n="form_name" class="block text-xs font-bold uppercase text-gray-500 mb-2">Name</label>
+              <input type="text" class="w-full bg-[#f7f7f4] border border-gray-300 rounded px-4 py-3 text-slate-900 focus:outline-none focus:border-emerald-600">
+            </div>
+            <div>
+              <label data-i18n="form_email" class="block text-xs font-bold uppercase text-gray-500 mb-2">Business Email</label>
+              <input type="email" class="w-full bg-[#f7f7f4] border border-gray-300 rounded px-4 py-3 text-slate-900 focus:outline-none focus:border-emerald-600">
+            </div>
+          </div>
+
+          <div>
+            <label data-i18n="form_service" class="block text-xs font-bold uppercase text-gray-500 mb-2">Service Needed</label>
+            <select class="w-full bg-[#f7f7f4] border border-gray-300 rounded px-4 py-3 text-slate-900 focus:outline-none focus:border-emerald-600">
+              <option>Single-Wallet & Casino API Integration</option>
+              <option>HTML5, WebGL & Crash Game Engine</option>
+              <option>Turnkey Backoffice & Risk Engine</option>
+            </select>
+          </div>
+
+          <div>
+            <label data-i18n="form_msg" class="block text-xs font-bold uppercase text-gray-500 mb-2">Project Message</label>
+            <textarea rows="4" class="w-full bg-[#f7f7f4] border border-gray-300 rounded px-4 py-3 text-slate-900 focus:outline-none focus:border-emerald-600"></textarea>
+          </div>
+
+          <button type="submit" data-i18n="form_btn" class="w-full bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs uppercase tracking-widest py-4 rounded-sm transition shadow-sm">
+            Send Message
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 border-t border-gray-300 text-center text-xs text-gray-500 font-mono">
+    © 2026 LAAS TECH & FIN. SERVICES. ALL RIGHTS RESERVED.
+  </footer>
+
+  <!-- MULTI-LANGUAGE DICTIONARY & JAVASCRIPT ENGINE -->
+  <script>
+    const translations = {
+      en: {
+        nav_about: "About Us",
+        nav_who: "Who We Are",
+        nav_clients: "Our Clients",
+        nav_what: "What We Do",
+        nav_leadership: "Leadership",
+        btn_consult: "Consult an Expert",
+        hero_tag: "// Third-Party iGaming Technology & Integration",
+        hero_title: "Modernize your gaming infrastructure. Scale without limits.",
+        hero_desc: "We provide custom HTML5 game engineering, low-latency API integrations, and robust web platform backends for global iGaming operators.",
+        hero_btn1: "Request Technical Demo",
+        hero_btn2: "Explore Capabilities",
+        hero_stat: "API Uptime Guaranteed",
+        clients_title: "Trusted Integration Partners & Clients",
+        
+        about_tag: "01 / About Us",
+        about_head: "Engineering Precision & Financial Technology for Modern iGaming",
+        about_p1: "LAAS TECH & FIN. SERVICES stands at the intersection of high-throughput gaming software development and secure digital financial integrations.",
+        about_p2: "Founded with a vision to streamline complex B2B technical challenges in the online gaming ecosystem, we build fault-tolerant backend systems, low-latency API layers, and custom graphics engines for leading platforms across Europe, Latin America, and Asia.",
+        about_p3: "Our specialized team of software architects, graphics engineers, and fintech experts ensures that our partners experience seamless game delivery, 99.99% operational uptime, and strict compliance with global gaming standards.",
+        about_stat1_title: "Daily Transactions",
+        about_stat1_desc: "Processed seamlessly through our API gateways.",
+        about_stat2_title: "Ultra Low Latency",
+        about_stat2_desc: "Real-time response times for live dealer & wallet calls.",
+        about_stat3_title: "Technical Support",
+        about_stat3_desc: "Continuous monitoring and developer assistance.",
+        about_stat4_title: "Provably Fair",
+        about_stat4_desc: "RNG certified algorithms and cryptographic verification.",
+
+        who_tag: "02 / Who We Are",
+        who_head: "Architecting High-Performance Infrastructure for Global iGaming Brands",
+        who_p1: "LAAS TECH & FIN. SERVICES is a specialized third-party technology, engineering, and platform integration agency dedicated to the global iGaming and digital gaming ecosystem.",
+        who_p2: "We bridge the gap between complex gaming logic and operator platforms. As an external integration and engineering partner, we work closely with top-tier aggregators, game studios, and casino operators.",
+        who_p3: "From low-latency Single Wallet & Transfer Wallet APIs to custom HTML5 / WebGL game engine development and scalable Backoffice CRM Systems, we handle the heavy technical workload.",
+        
+        what_tag: "03 / What We Do",
+        what_head: "iGaming Capabilities & Integration Engineering",
+        c1_sub: "[ Unified API Aggregation ]",
+        c1_title: "Single-Wallet & Casino API Integration",
+        c1_desc: "Robust Single-Wallet and Transfer-Wallet architecture with sub-100ms latency. Seamlessly connect Live Casino feeds and Sportsbooks.",
+        c2_sub: "[ Custom Game Development ]",
+        c2_title: "HTML5, WebGL & Crash Games",
+        c2_desc: "Custom-engineered HTML5/WebGL game titles—from fast-paced Crash Games, Mines, and Plinko to RNG certified Slot Machines.",
+        c3_sub: "[ Turnkey Backoffice & CRM ]",
+        c3_title: "Operator Platform & Risk Engines",
+        c3_desc: "Enterprise iGaming platform backends equipped with real-time player analytics, fraud detection, and regulatory logging.",
+        
+        lead_tag: "04 / Leadership",
+        lead_head: "Leadership & Management",
+        lead_sub: "The driving force behind Laas Tech",
+        ceo_desc: "Drives strategic vision, business expansion, and global client partnerships across the iGaming ecosystem.",
+        cfo_desc: "Oversees financial planning, capital allocation, and compliance for corporate fiscal growth.",
+        cto_desc: "Head of system architecture, high-throughput API design, and provably fair game engine innovation.",
+        coo_desc: "Manages daily operational execution, service delivery pipelines, and cross-functional project teams.",
+        hr_desc: "Leads talent acquisition, engineering culture, and strategic human resource development.",
+        admin_desc: "Directs organizational infrastructure, administrative logistics, and facilities operational support.",
+        
+        contact_tag: "// Get In Touch",
+        contact_head: "Let’s discuss your technical requirements.",
+        contact_desc: "Reach out to our engineering team to request custom game demos, integration documentation, or platform quotes.",
+        contact_details_title: "OUR CONTACT DETAILS",
+        email_label: "Official Email",
+        form_name: "Name",
+        form_email: "Business Email",
+        form_service: "Service Needed",
+        form_msg: "Project Message",
+        form_btn: "Send Message"
+      },
+      de: {
+        nav_about: "Über Uns",
+        nav_who: "Wer Wir Sind",
+        nav_clients: "Unsere Kunden",
+        nav_what: "Unsere Leistungen",
+        nav_leadership: "Führungsteam",
+        btn_consult: "Experten Benachrichtigen",
+        hero_tag: "// Drittanbieter-iGaming-Technologie & Integration",
+        hero_title: "Modernisieren Sie Ihre Gaming-Infrastruktur. Skalieren Sie grenzenlos.",
+        hero_desc: "Wir bieten maßgeschneiderte HTML5-Spielentwicklung, Latenz-arme API-Integrationen und robuste Web-Plattformen für globale iGaming-Betreiber.",
+        hero_btn1: "Technische Demo Anfordern",
+        hero_btn2: "Fähigkeiten Erkunden",
+        hero_stat: "Garantierte API-Betriebszeit",
+        clients_title: "Vertrauenswürdige Integrationspartner & Kunden",
+        
+        about_tag: "01 / Über Uns",
+        about_head: "Technisches Know-how & Finanztechnologie für modernes iGaming",
+        about_p1: "LAAS TECH & FIN. SERVICES verbindet hochmoderne Spieleentwicklung mit sicherer digitaler Finanztechnologie.",
+        about_p2: "Gegründet mit der Vision, B2B-Anforderungen im Online-Gaming-Ökosystem zu vereinfachen, entwickeln wir fehlertolerante Backend-Systeme und maßgeschneiderte Spiele-Engines.",
+        about_p3: "Unser Team aus Softwarearchitekten und Fintech-Experten garantiert eine nahtlose Spielbereitstellung und 99,99% Betriebssicherheit.",
+        about_stat1_title: "Tägliche Transaktionen",
+        about_stat1_desc: "Nahtlos über unsere API-Gateways verarbeitet.",
+        about_stat2_title: "Ultra-Niedrige Latenz",
+        about_stat2_desc: "Echtzeit-Antwortzeiten für Live-Dealer und Wallet-Anfragen.",
+        about_stat3_title: "Technischer Support",
+        about_stat3_desc: "Kontinuierliche Überwachung und Entwicklerunterstützung.",
+        about_stat4_title: "Nachweislich Fair",
+        about_stat4_desc: "RNG-zertifizierte Algorithmen und kryptografische Überprüfung.",
+
+        who_tag: "02 / Wer Wir Sind",
+        who_head: "Architektur von Hochleistungsinfrastrukturen für globale iGaming-Marken",
+        who_p1: "LAAS TECH & FIN. SERVICES ist eine spezialisierte Agentur für Technologie, Engineering und Plattformintegration im iGaming-Ökosystem.",
+        who_p2: "Wir schließen die Lücke zwischen komplexer Spiellogik und Betreiberplattformen als externer Integrationspartner.",
+        who_p3: "Von APIs mit geringer Latenz bis hin zu maßgeschneiderter HTML5-Spielentwicklung übernehmen wir die technische Arbeit.",
+        
+        what_tag: "03 / Was Wir Tun",
+        what_head: "iGaming-Fähigkeiten & Integrations-Engineering",
+        c1_sub: "[ Einzelseiten-API-Aggregation ]",
+        c1_title: "Single-Wallet & Casino-API-Integration",
+        c1_desc: "Robuste Single-Wallet-Architektur mit Latenzen unter 100 ms. Nahtlose Anbindung von Live-Casino-Feeds.",
+        c2_sub: "[ Eigene Spielentwicklung ]",
+        c2_title: "HTML5, WebGL & Crash-Spiele",
+        c2_desc: "Maßgeschneiderte HTML5/WebGL-Spieletitel – von Crash-Games bis zu zertifizierten Spielautomaten.",
+        c3_sub: "[ Schlüsselfertiges Backoffice & CRM ]",
+        c3_title: "Betreiberplattform & Risiko-Engine",
+        c3_desc: "Enterprise-iGaming-Backend mit Echtzeitanalysen, Betrugserkennung und Compliance.",
+        
+        lead_tag: "04 / Führung",
+        lead_head: "Führung & Management",
+        lead_sub: "Die treibende Kraft hinter Laas Tech",
+        ceo_desc: "Treibt die strategische Vision und globale Kundenpartnerschaften voran.",
+        cfo_desc: "Überwacht die Finanzplanung und Compliance für das Unternehmenswachstum.",
+        cto_desc: "Leiter Systemarchitektur und provably fair Spiel-Engine-Innovationen.",
+        coo_desc: "Leitet die tägliche betriebliche Ausführung und mehraufgabenbezogene Projektteams.",
+        hr_desc: "Leitet die Talentakquise und die strategische Personalentwicklung.",
+        admin_desc: "Leitet die organisatorische Infrastruktur und administrative Logistik.",
+        
+        contact_tag: "// Kontakt Aufnehmen",
+        contact_head: "Lassen Sie uns Ihre technischen Anforderungen besprechen.",
+        contact_desc: "Wenden Sie sich an unser Team, um Demos, Integrationsdokumentationen oder Angebote anzufordern.",
+        contact_details_title: "UNSERE KONTAKTDATEN",
+        email_label: "Offizielle E-Mail",
+        form_name: "Name",
+        form_email: "Geschäftliche E-Mail",
+        form_service: "Benötigter Service",
+        form_msg: "Projektnachricht",
+        form_btn: "Nachricht Senden"
+      },
+      fr: {
+        nav_about: "À Propos",
+        nav_who: "Qui Sommes-Nous",
+        nav_clients: "Nos Clients",
+        nav_what: "Ce Que Nous Faisons",
+        nav_leadership: "Direction",
+        btn_consult: "Consulter un Expert",
+        hero_tag: "// Technologie iGaming Tiers & Intégration",
+        hero_title: "Modernisez votre infrastructure de jeu. Évoluez sans limites.",
+        hero_desc: "Nous fournissons un développement de jeux HTML5 sur mesure, des intégrations d'API à faible latence et des back-ends robustes.",
+        hero_btn1: "Demander une Démo",
+        hero_btn2: "Explorer les Capacités",
+        hero_stat: "Disponibilité API Garantie",
+        clients_title: "Partenaires d'Intégration de Confiance",
+        
+        about_tag: "01 / À Propos de Nous",
+        about_head: "Précision d'Ingénierie & Technologie Financière pour le iGaming Moderne",
+        about_p1: "LAAS TECH & FIN. SERVICES est à l'intersection du développement de logiciels de jeu à haut débit et des intégrations financières sécurisées.",
+        about_p2: "Fondée pour simplifier les défis B2B de l'écosystème iGaming, notre entreprise conçoit des backends tolérants aux pannes et des moteurs de jeux sur mesure.",
+        about_p3: "Notre équipe spécialisée d'architectes logiciels assure une livraison de jeux sans faille et une disponibilité de 99,99 %.",
+        about_stat1_title: "Transactions Quotidiens",
+        about_stat1_desc: "Traitées de manière transparente via nos passerelles API.",
+        about_stat2_title: "Très Faible Latence",
+        about_stat2_desc: "Temps de réponse en temps réel pour le casino en direct.",
+        about_stat3_title: "Support Technique",
+        about_stat3_desc: "Surveillance continue et assistance aux développeurs.",
+        about_stat4_title: "Provably Fair",
+        about_stat4_desc: "Algorithmes certifiés RNG et vérification cryptographique.",
+
+        who_tag: "02 / Qui Sommes-Nous",
+        who_head: "Conception d'Infrastructures Haute Performance pour le iGaming Mondial",
+        who_p1: "LAAS TECH & FIN. SERVICES est une agence spécialisée dans l'ingénierie et l'intégration de plateformes iGaming.",
+        who_p2: "Nous faisons le lien entre la logique de jeu complexe et les plateformes d'opérateurs en tant que partenaire d'intégration externe.",
+        who_p3: "Des API Single Wallet à faible latence au développement de moteurs de jeu HTML5 / WebGL sur mesure.",
+        
+        what_tag: "03 / Ce Que Nous Faisons",
+        what_head: "Ingénierie des Capacités iGaming & Intégration",
+        c1_sub: "[ Agrégation d'API Unifiée ]",
+        c1_title: "Intégration Single-Wallet & Casino API",
+        c1_desc: "Architecture Single-Wallet robuste avec une latence inférieure à 100 ms.",
+        c2_sub: "[ Développement de Jeux Sur Mesure ]",
+        c2_title: "Jeux HTML5, WebGL & Crash",
+        c2_desc: "Titres de jeux HTML5/WebGL sur mesure : Crash Games, Mines, Plinko et machines à sous.",
+        c3_sub: "[ Backoffice Clé en Main & CRM ]",
+        c3_title: "Plateforme Opérateur & Moteurs de Risque",
+        c3_desc: "Plateformes iGaming d'entreprise équipées d'analyses en temps réel et détection de fraudes.",
+        
+        lead_tag: "04 / Leadership",
+        lead_head: "Direction & Gestion",
+        lead_sub: "La force motrice de Laas Tech",
+        ceo_desc: "Dirige la vision stratégique et les partenariats mondiaux.",
+        cfo_desc: "Supervise la planification financière et la conformité fiscale.",
+        cto_desc: "Responsable de l'architecture système et de la conception des API.",
+        coo_desc: "Gère l'exécution opérationnelle quotidienne et les équipes de projet.",
+        hr_desc: "Dirige l'acquisition de talents et les ressources humaines.",
+        admin_desc: "Gère l'infrastructure organisationnelle et la logistique.",
+        
+        contact_tag: "// Contactez-Nous",
+        contact_head: "Discutons de vos besoins techniques.",
+        contact_desc: "Contactez notre équipe d'ingénieurs pour demander des démos, de la documentation ou des devis.",
+        contact_details_title: "NOS COORDONNÉES DE CONTACT",
+        email_label: "E-mail Officiel",
+        form_name: "Nom",
+        form_email: "E-mail Professionnel",
+        form_service: "Service Requis",
+        form_msg: "Message du Projet",
+        form_btn: "Envoyer le Message"
+      },
+      es: {
+        nav_about: "Nosotros",
+        nav_who: "Quiénes Somos",
+        nav_clients: "Nuestros Clientes",
+        nav_what: "Qué Hacemos",
+        nav_leadership: "Liderazgo",
+        btn_consult: "Consultar a un Experto",
+        hero_tag: "// Tecnología iGaming de Terceros e Integración",
+        hero_title: "Modernice su infraestructura de juego. Escale sin límites.",
+        hero_desc: "Ofrecemos ingeniería de juegos HTML5 personalizada, integraciones de API de baja latencia y plataformas backend sólidas.",
+        hero_btn1: "Solicitar Demo Técnica",
+        hero_btn2: "Explorar Capacidades",
+        hero_stat: "Disponibilidad de API Garantizada",
+        clients_title: "Socios de Integración y Clientes de Confianza",
+        
+        about_tag: "01 / Sobre Nosotros",
+        about_head: "Ingeniería de Precisión y Tecnología Financiera para el iGaming Moderno",
+        about_p1: "LAAS TECH & FIN. SERVICES se encuentra en la intersección del desarrollo de software de juegos de alto rendimiento y las integraciones financieras seguras.",
+        about_p2: "Fundada para resolver los desafíos B2B del ecosistema iGaming, construimos sistemas backend tolerantes a fallos y motores de juegos a medida.",
+        about_p3: "Nuestro equipo especializado garantiza un tiempo de actividad operativo del 99.99% y el cumplimiento estricto de los estándares internacionales.",
+        about_stat1_title: "Transacciones Diarias",
+        about_stat1_desc: "Procesadas sin problemas a través de nuestras pasarelas API.",
+        about_stat2_title: "Latencia Ultra Baja",
+        about_stat2_desc: "Tiempos de respuesta en tiempo real para casinos en vivo.",
+        about_stat3_title: "Soporte Técnico",
+        about_stat3_desc: "Monitoreo continuo y asistencia para desarrolladores.",
+        about_stat4_title: "Provably Fair",
+        about_stat4_desc: "Algoritmos certificados con RNG y verificación criptográfica.",
+
+        who_tag: "02 / Quiénes Somos",
+        who_head: "Arquitectura de Infraestructura de Alto Rendimiento para Marcas Globales",
+        who_p1: "LAAS TECH & FIN. SERVICES es una agencia especializada en tecnología, ingeniería e integración de plataformas iGaming.",
+        who_p2: "Conectamos la lógica del juego con las plataformas de operadores como socio de integración externo.",
+        who_p3: "Desde API Single Wallet de baja latencia hasta motores de juego HTML5 / WebGL personalizados.",
+        
+        what_tag: "03 / Qué Hacemos",
+        what_head: "Capacidades de iGaming e Ingeniería de Integración",
+        c1_sub: "[ Agregación de API Unificada ]",
+        c1_title: "Integración de API de Casino y Single-Wallet",
+        c1_desc: "Arquitectura sólida de Single-Wallet con latencia inferior a 100 ms.",
+        c2_sub: "[ Desarrollo de Juegos Personalizados ]",
+        c2_title: "Juegos HTML5, WebGL y Crash",
+        c2_desc: "Títulos de juegos HTML5/WebGL personalizados: Crash Games, Minas, Plinko y tragamonedas.",
+        c3_sub: "[ Backoffice Llave en Mano y CRM ]",
+        c3_title: "Plataforma de Operador y Motores de Riesgo",
+        c3_desc: "Plataforma backend de iGaming empresarial equipada con analítica de jugadores y detección de fraudes.",
+        
+        lead_tag: "04 / Liderazgo",
+        lead_head: "Liderazgo y Gestión",
+        lead_sub: "La fuerza impulsora detrás de Laas Tech",
+        ceo_desc: "Impulsa la visión estratégica, la expansión comercial y las alianzas globales.",
+        cfo_desc: "Supervisa la planificación financiera y el cumplimiento corporativo.",
+        cto_desc: "Jefe de arquitectura de sistemas y diseño de API de alto rendimiento.",
+        coo_desc: "Gestiona la ejecución operativa diaria y los equipos de proyectos.",
+        hr_desc: "Lidera la adquisición de talento y los recursos humanos.",
+        admin_desc: "Dirige la infraestructura organizacional y la logística administrativa.",
+        
+        contact_tag: "// Póngase en Contacto",
+        contact_head: "Discutamos sus requerimientos técnicos.",
+        contact_desc: "Comuníquese con nuestro equipo de ingeniería para solicitar demostraciones, documentación o cotizaciones.",
+        contact_details_title: "NUESTROS DETALLES DE CONTACTO",
+        email_label: "Correo Oficial",
+        form_name: "Nombre",
+        form_email: "Correo Corporativo",
+        form_service: "Servicio Requerido",
+        form_msg: "Mensaje del Proyecto",
+        form_btn: "Enviar Mensaje"
+      }
+    };
+
+    function updateLanguage(lang) {
+      const elements = document.querySelectorAll('[data-i18n]');
+      elements.forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+          el.textContent = translations[lang][key];
+        }
+      });
+      localStorage.setItem('preferredLang', lang);
+    }
+
+    document.getElementById('langSelector').addEventListener('change', (e) => {
+      updateLanguage(e.target.value);
+    });
+
+    // Auto load previously selected language on page refresh
+    window.addEventListener('DOMContentLoaded', () => {
+      const savedLang = localStorage.getItem('preferredLang') || 'en';
+      document.getElementById('langSelector').value = savedLang;
+      updateLanguage(savedLang);
+    });
+  </script>
+
+</body>
+</html>
